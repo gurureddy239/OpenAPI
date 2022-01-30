@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  version: V1
+  title: ''
+  description: ''
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://netapp.com/openapi/V1
+paths:
+  /accounts:
+    get:
+      tags: 
+        - Account
+      responses:
+        "200":
+          description: Get List of Accounts
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/accounts"
+    post:
+      tags: 
+        - Accounts
+      requestBody:
+        description: Create an Account
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/accounts"
+          
+          
+      responses:
+        '201':
+          description: Created account
+          content:
+            applications/json:
+              schema:
+                $ref: "#/components/schemas/accounts"
+            
+          
+        
+  /accounts/{OptyId}:
+    get:
+      tags: 
+        - Account
+      parameters: 
+        - name: OptyId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Get an Account 
+          content:
+            application/json:
+              schema:
+                $ref:  "#/components/schemas/accounts"
+            
+        
+              
+components:
+  schemas:
+    accounts:
+      $ref: "https://raw.githubusercontent.com/gurureddy239/OpenAPI/main/JSON/Account_Schema.json"
