@@ -6,17 +6,18 @@
       "type": "array",
       "items": {
         "properties": {
-          "Description": {
+          "OptyId": {
             "type": "string"
           },
           "Name": {
             "type": "string"
           },
-          "OptyId": {
+          "Description": {
             "type": "string"
           },
           "Status": {
-            "type": "string"
+            "type": "string",
+            "enum": ["New", "InProgress","Closed"]
           },
           "OptyLineItems": {
             "type": "array",
