@@ -1,5 +1,5 @@
 {
-  "openapi" : "3.0.0",
+  "openapi" : "3.0.1",
   "info" : {
     "version" : "V1",
     "title" : "",
@@ -81,7 +81,7 @@
   "components" : {
     "schemas" : {
       "accounts" : {
-        "$ref" : "https://raw.githubusercontent.com/gurureddy239/OpenAPI/main/JSON/Account_Schema.json"
+        "$ref" : "https://raw.githubusercontent.com/gurureddy239/OpenAPI/main/Account/Schema/Account_Schema.json"
       }
     }
   }

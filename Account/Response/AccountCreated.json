@@ -1,0 +1,17 @@
+{
+  "Account": [
+    {
+      "Name": "Microsoft Inc",
+	  "AccountId": "A100",
+      "Category": "Strategic",
+      "Website": "www.microsoft.com",
+    }
+	{
+      "Name": "Google Inc",
+	   "AccountId": "A200",
+      "Category": "Strategic",
+      "Website": "www.google.com",
+     
+    }
+  ]
+}

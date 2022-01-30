@@ -9,6 +9,9 @@
           "Name": {
             "type": "string"
           },
+          "AccountId": {
+            "type": "string"
+          },
           "Category": {
             "type": "string",
             "enum": [
