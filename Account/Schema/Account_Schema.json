@@ -74,28 +74,11 @@
                       },
                       "UnitPrice": {
                         "type": "number"
-                      },
-                      "SubItems": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "SubItem#": {
-                              "type": "number"
-                            },
-                            "SubItemProductId": {
-                              "type": "string"
-                            }
-                          },
-                          "required": [
-                            "SubItem#"
-                          ]
-                        }
                       }
-                    },
+                     },
                     "type": "object",
                     "required": [
-                      "Item#"
+                      "Product"
                     ]
                   }
                 }
