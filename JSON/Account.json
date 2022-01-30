@@ -1,5 +1,5 @@
 {
-  "$id": "http://netapp.com/json/schemas/oppurtunity",
+  "$id": "http://netapp.com/json/schemas/account",
   "type": "object",
   "properties": {
     "Account": {
