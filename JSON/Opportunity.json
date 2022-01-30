@@ -1,0 +1,110 @@
+{
+  "$id": "http://netapp.com/json/schemas/oppurtunity",
+  "type": "object",
+  "properties": {
+    "Account": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "RecordType": {
+            "type": "string"
+          },
+          "Opportunity": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "OptyId": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Description": {
+                  "type": "string"
+                },
+                "Type": {
+                  "type": "string",
+                  "enum": [
+                    "New",
+                    "Expansion",
+                    "Upsell",
+                    "Renewal"
+                  ]
+                },
+                "OpportunitySource": {
+                  "type": "string",
+                  "enum": [
+                    "Partner",
+                    "Referal",
+                    "Cor Rep",
+                    "Renewal"
+                  ]
+                },
+                "Status": {
+                  "type": "string",
+                  "enum": [
+                    "New",
+                    "InProgress",
+                    "Closed"
+                  ]
+                },
+                "OpportunityProduct": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "Product": {
+                        "type": "string"
+                      },
+                      "ProductCode": {
+                        "type": "string"
+                      },
+                      "Quantity": {
+                        "type": "number"
+                      },
+                      "UnitPrice": {
+                        "type": "number"
+                      },
+                      "SubItems": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "SubItem#": {
+                              "type": "number"
+                            },
+                            "SubItemProductId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "SubItem#"
+                          ]
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "required": [
+                      "Item#"
+                    ]
+                  }
+                }
+              },
+              "type": "object",
+              "required": [
+                "OptyId"
+              ]
+            }
+          }
+        },
+        "type": "object",
+        "required": [
+          "Name"
+        ]
+        }
+      }
+    }
+  
+}
