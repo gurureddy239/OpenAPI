@@ -2,57 +2,62 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
-      "error": {
-        "type": "object",
-        "properties": {
-          "errors": {
-            "type": "array",
-            "items": [
-              {
-                "type": "object",
-                "properties": {
-                  "category": {
-                    "type": "string"
-                  },
-                  "reason": {
-                    "type": "string"
-                  },
-                  "message": {
-                    "type": "string"
-                  },
-                  "locationType": {
-                    "type": "string"
-                  },
-                  "location": {
-                    "type": "string"
-                  }
+        "error": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "reason": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                },
+                                "locationType": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "reason",
+                                "message",
+                                "locationType",
+                                "location"
+                            ]
+                        }
+                    ]
                 },
-                "required": [
-                  "category",
-                  "reason",
-                  "message",
-                  "locationType",
-                  "location"
-                ]
-              }
+                "code": {
+                    "type": "integer",
+                    "enum": [
+                        "400",
+                        "401",
+                        "403",
+                        "404",
+                        "405",
+                        "500",
+                        "501",
+                        "503"
+                    ]
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "errors",
+                "code",
+                "message"
             ]
-          },
-          "code": {
-            "type": "integer",
-            "enum": ["400","401","403","404","405","500","501","503"]
-          },
-          "message": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "errors",
-          "code",
-          "message"
-        ]
-      }
+        }
     },
     "required": [
-      "error"
+        "error"
     ]
-  }
+}
