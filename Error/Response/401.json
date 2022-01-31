@@ -1,7 +1,7 @@
 {
 	"error": {
 		"code": 401,
-		"type": "unauthorized",
+		"type": "Unauthorized",
 		"message": "The user is not authorized to make the request"
 	}
 }

@@ -4,14 +4,15 @@ info:
   title: ''
   description: ''
 servers:
-  # Added by API Auto Mocking Plugin
-  - description: SwaggerHub API Auto Mocking
-    url: https://netapp.com/openapi/V1
+  - url: https://its.dev1.oci.netapp.com/account
 paths:
   /accounts:
     get:
       tags: 
         - Account
+      operationId: getAccounts
+      summary: Get list of Accounts
+      description: This Operation extracts the list of the Accounts
       responses:
         "200":
           description: Get List of Accounts
@@ -19,17 +20,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/accounts"
+              
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                '401':
+                  $ref:  "#/components/examples/401" 
+        '503':
+          description: Service Unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+     
+              
+          
     post:
       tags: 
-        - Accounts
+        - Account
+      operationId: createAccounts
       requestBody:
         description: Create an Account
         content:
           application/json:
             schema:
               $ref: "#/components/schemas/accounts"
-          
-          
+      summary: Creates Account
+      description: This operation creates an Account      
       responses:
         '201':
           description: Created account
@@ -37,19 +58,23 @@ paths:
             applications/json:
               schema:
                 $ref: "#/components/schemas/accounts"
+      
             
           
         
-  /accounts/{OptyId}:
+  /accounts/{Id}:
     get:
       tags: 
         - Account
       parameters: 
-        - name: OptyId
+        - name: Id
           in: path
           required: true
           schema:
             type: number
+      operationId: getAccount
+      summary: Get an Account
+      description: This operation extract an Account  based on the Account Id
       responses:
         '200':
           description: Get an Account 
@@ -57,10 +82,33 @@ paths:
             application/json:
               schema:
                 $ref:  "#/components/schemas/accounts"
+      
             
-        
+              
+                  
+                
+                
+                  
+                
               
 components:
   schemas:
     accounts:
       $ref: "https://raw.githubusercontent.com/gurureddy239/OpenAPI/main/Account/Schema/Account_Schema.json"
+    error:
+      $ref: "https://raw.githubusercontent.com/gurureddy239/OpenAPI/main/Error/Schema/Error.json"
+   
+
+  examples:
+    401:
+      value: 
+        error:
+          code: 401
+          type: Unauthorized
+          message: The user is not authorized to make the request
+    503:
+      value: 
+        error:
+          code: 503
+          type: Service Unavailable
+          message: A backend error occurred

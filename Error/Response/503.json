@@ -1,7 +1,7 @@
 {
 	"error": {
 		"code": 503,
-		"type": "backendError",
+		"type": "Service Unavailable",
 		"message": "A backend error occurred"
 	}
 }
