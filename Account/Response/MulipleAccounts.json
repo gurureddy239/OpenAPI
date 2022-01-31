@@ -2,7 +2,7 @@
   "Account": [
     {
       "Name": "Microsoft Inc",
-	  "AccountId": "A100",
+      "AccountId": "A100",
       "Category": "Strategic",
       "Website": "www.microsoft.com",
       "Opportunity": [
@@ -18,11 +18,11 @@
               "Product": "Cloud Compliance",
               "ProductCode": "SUBS-CLOUD-COMPL",
               "Quantity": 10,
-              "UnitPrice": 100,
+              "UnitPrice": 100
             }
           ]
-        }
-		{
+        },
+        {
           "OptyId": 101,
           "Name": "Microsoft Direct",
           "Description": "Microsoft Opty for NetApp Cloud Offering Products",
@@ -34,21 +34,21 @@
               "Product": "Cloud Volumes Service",
               "ProductCode": "SUBS-CVS",
               "Quantity": 10,
-              "UnitPrice": 100,
-            }
-			{
+              "UnitPrice": 100
+            },
+            {
               "Product": "Cloud Volumes ONTA",
               "ProductCode": "CVO-5",
               "Quantity": 10,
-              "UnitPrice": 100,
+              "UnitPrice": 100
             }
           ]
         }
       ]
-    }
-	 {
+    },
+    {
       "Name": "Google Inc",
-	   "AccountId": "A200",
+      "AccountId": "A200",
       "Category": "Strategic",
       "Website": "www.google.com",
       "Opportunity": [
@@ -64,11 +64,11 @@
               "Product": "Cloud Compliance",
               "ProductCode": "SUBS-CLOUD-COMPL",
               "Quantity": 10,
-              "UnitPrice": 100,
+              "UnitPrice": 100
             }
           ]
-        }
-		{
+        },
+        {
           "OptyId": 201,
           "Name": "Microsoft Direct",
           "Description": "Microsoft Opty for NetApp Cloud Offering Products",
@@ -80,13 +80,13 @@
               "Product": "Cloud Volumes Service",
               "ProductCode": "SUBS-CVS",
               "Quantity": 10,
-              "UnitPrice": 100,
-            }
-			{
+              "UnitPrice": 100
+            },
+            {
               "Product": "Cloud Volumes ONTA",
               "ProductCode": "CVO-5",
               "Quantity": 10,
-              "UnitPrice": 100,
+              "UnitPrice": 100
             }
           ]
         }
