@@ -2,62 +2,41 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
-        "error": {
-            "type": "object",
-            "properties": {
-                "errors": {
-                    "type": "array",
-                    "items": [
-                        {
-                            "type": "object",
-                            "properties": {
-                                "reason": {
-                                    "type": "string"
-                                },
-                                "message": {
-                                    "type": "string"
-                                },
-                                "locationType": {
-                                    "type": "string"
-                                },
-                                "location": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [
-                                "reason",
-                                "message",
-                                "locationType",
-                                "location"
-                            ]
-                        }
-                    ]
-                },
-                "code": {
-                    "type": "integer",
-                    "enum": [
-                        "400",
-                        "401",
-                        "403",
-                        "404",
-                        "405",
-                        "500",
-                        "501",
-                        "503"
-                    ]
-                },
-                "message": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "errors",
-                "code",
-                "message"
-            ]
-        }
+      "error": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "code": {
+            "type": "integer"
+          },
+          "error_subcode": {
+            "type": "integer"
+          },
+          "error_user_title": {
+            "type": "string"
+          },
+          "error_user_msg": {
+            "type": "string"
+          },
+          "tracking_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message",
+          "type",
+          "code",
+          "tracking_id"
+        ]
+      }
     },
     "required": [
-        "error"
+      "error"
     ]
-}
+  }
+  
